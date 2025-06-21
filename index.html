@@ -16,6 +16,7 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
+    <!-- Header & Navigation -->
     <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home" class="text-xl font-bold text-gray-900">Hyeonsam Tak</a>
@@ -29,6 +30,7 @@
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
             <a href="#about" class="block py-2 px-6 text-gray-600 hover:bg-gray-100">About</a>
             <a href="#publications" class="block py-2 px-6 text-gray-600 hover:bg-gray-100">Publications</a>
@@ -37,8 +39,10 @@
         </div>
     </header>
 
+    <!-- Main Content -->
     <main class="container mx-auto px-6 py-8 md:py-16">
 
+        <!-- Home/Hero Section -->
         <section id="home" class="min-h-[50vh] flex items-center">
             <div class="w-full">
                 <div>
@@ -67,6 +71,7 @@
             </div>
         </section>
 
+        <!-- About Section -->
         <section id="about" class="pt-24 -mt-16">
             <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
                 <h2 class="text-3xl font-bold text-gray-900 mb-6">Education</h2>
@@ -78,37 +83,72 @@
             </div>
         </section>
 
+        <!-- Publications Section -->
         <section id="publications" class="pt-24 -mt-16">
             <h2 class="text-3xl font-bold text-gray-900 mb-8">Publications</h2>
             <div class="space-y-12">
+                <!-- *** 논문 목록 표시 방식 수정 *** -->
                 <div>
                     <h3 class="text-2xl font-semibold text-gray-800 border-b pb-2 mb-4">Journal Papers in Review</h3>
                     <ul class="space-y-4">
-                        <li class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">Tak, H. “Elevated Suicide Rates Diminish Internalized Morality, Especially Among High Socioeconomic Status Individuals.” Submitted to: <em>Nature Human Behavior</em>.</li>
-                        <li class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">Tak, H. “Outgroup Exclusion is Maximized at the Extremes when Income and Subjective Class Match.” Submitted to: <em>Group Processes & Intergroup Relations</em>.</li>
-                        <li class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">Tak, H. “Socioeconomic Status, Collectivism, and Prosocial Civic Engagement.” Submitted to: <em>Health and Social Welfare Review</em>.</li>
+                        <li class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                            <p class="font-semibold text-gray-800">“Elevated Suicide Rates Diminish Internalized Morality, Especially Among High Socioeconomic Status Individuals.”</p>
+                            <p class="mt-2 text-gray-600">Tak, H.</p>
+                            <p class="mt-2 text-sm text-gray-500">Submitted to: <em>Nature Human Behavior</em>.</p>
+                        </li>
+                        <li class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                            <p class="font-semibold text-gray-800">“Outgroup Exclusion is Maximized at the Extremes when Income and Subjective Class Match.”</p>
+                            <p class="mt-2 text-gray-600">Tak, H.</p>
+                            <p class="mt-2 text-sm text-gray-500">Submitted to: <em>Group Processes & Intergroup Relations</em>.</p>
+                        </li>
+                        <li class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                            <p class="font-semibold text-gray-800">“Socioeconomic Status, Collectivism, and Prosocial Civic Engagement.”</p>
+                            <p class="mt-2 text-gray-600">Tak, H.</p>
+                            <p class="mt-2 text-sm text-gray-500">Submitted to: <em>Health and Social Welfare Review</em>.</p>
+                        </li>
                     </ul>
                 </div>
 
                 <div>
                     <h3 class="text-2xl font-semibold text-gray-800 border-b pb-2 mb-4">Journal Papers Accepted</h3>
                     <ul class="space-y-4">
-                        <li class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">Choi Y., Tak, H. “Economic Resources Moderate Meritocracy‘s Impact on Fertility Intentions Among Korean Youth.” <em>Journal of the Korean Official Statistics</em>.</li>
+                        <li class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                            <p class="font-semibold text-gray-800">“Economic Resources Moderate Meritocracy‘s Impact on Fertility Intentions Among Korean Youth.”</p>
+                            <p class="mt-2 text-gray-600">Choi Y., Tak, H.</p>
+                            <p class="mt-2 text-sm text-gray-500"><em>Journal of the Korean Official Statistics</em>.</p>
+                        </li>
                     </ul>
                 </div>
 
                 <div>
                     <h3 class="text-2xl font-semibold text-gray-800 border-b pb-2 mb-4">Peer-Reviewed Journal Publications</h3>
                     <ul class="space-y-4">
-                        <li class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">Tak, H. (2024). “The Relationship between Social Status and Donation Behavior: Focusing on Analysis of Donation Participation and Donation Intention.” <em>Health and Social Welfare Review</em>, 44(4), 151–173.</li>
-                        <li class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">Tak, H., & Cha, J. (2024). “The Impact of Youth Unemployment on Burnout: Microscopic Evidence from South Korea.” <em>Journal of the Korean Official Statistics</em>, 29(2), 81–96.</li>
-                        <li class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">Tak, H., Cha, J., & Son, J. (2023). “The Long-term Relationship between Job Instability and Suicide Rate: The Comparisons of Population Groups.” <em>Quarterly Journal of Labor Policy</em>, 23(3), 1–32.</li>
-                        <li class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">Tak, H., Cha, J., & Choi, R. (2023). “A Study on Sustainability of India’s Non-Aligned Movement using Balance of Threat Theory.” <em>Journal of South Asian Studies</em>, 28(4), 105–148.</li>
+                        <li class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                            <p class="font-semibold text-gray-800">“The Relationship between Social Status and Donation Behavior: Focusing on Analysis of Donation Participation and Donation Intention.”</p>
+                            <p class="mt-2 text-gray-600">Tak, H. (2024).</p>
+                            <p class="mt-2 text-sm text-gray-500"><em>Health and Social Welfare Review</em>, 44(4), 151–173.</p>
+                        </li>
+                        <li class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                            <p class="font-semibold text-gray-800">“The Impact of Youth Unemployment on Burnout: Microscopic Evidence from South Korea.”</p>
+                            <p class="mt-2 text-gray-600">Tak, H., & Cha, J. (2024).</p>
+                            <p class="mt-2 text-sm text-gray-500"><em>Journal of the Korean Official Statistics</em>, 29(2), 81–96.</p>
+                        </li>
+                        <li class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                            <p class="font-semibold text-gray-800">“The Long-term Relationship between Job Instability and Suicide Rate: The Comparisons of Population Groups.”</p>
+                            <p class="mt-2 text-gray-600">Tak, H., Cha, J., & Son, J. (2023).</p>
+                            <p class="mt-2 text-sm text-gray-500"><em>Quarterly Journal of Labor Policy</em>, 23(3), 1–32.</p>
+                        </li>
+                        <li class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                            <p class="font-semibold text-gray-800">“A Study on Sustainability of India’s Non-Aligned Movement using Balance of Threat Theory.”</p>
+                            <p class="mt-2 text-gray-600">Tak, H., Cha, J., & Choi, R. (2023).</p>
+                            <p class="mt-2 text-sm text-gray-500"><em>Journal of South Asian Studies</em>, 28(4), 105–148.</p>
+                        </li>
                     </ul>
                 </div>
             </div>
         </section>
 
+        <!-- Experience & Honors Section -->
         <section id="experience" class="pt-24 -mt-16">
             <h2 class="text-3xl font-bold text-gray-900 mb-8">Experience & Honors</h2>
             <div class="flex flex-col space-y-12">
@@ -164,6 +204,7 @@
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact" class="pt-24 -mt-16">
             <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
                 <h2 class="text-3xl font-bold text-gray-900 mb-6">Contact</h2>
@@ -189,6 +230,7 @@
 
     </main>
 
+    <!-- Footer -->
     <footer class="bg-gray-800 text-white mt-16">
         <div class="container mx-auto px-6 py-6 text-center text-gray-400">
             <p>&copy; <span id="year"></span> Hyeonsam Tak. All Rights Reserved.</p>
