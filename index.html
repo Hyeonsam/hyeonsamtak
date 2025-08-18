@@ -7,246 +7,186 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- 새로운 폰트 'Lora'와 'Playfair Display' 적용 -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Lora', serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-        /* 섹션 간의 부드러운 전환을 위한 앵커 오프셋 */
-        section {
-            scroll-margin-top: 80px;
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        .publication-list li {
+            position: relative;
+            padding-left: 1.5rem; /* 24px */
+            margin-bottom: 1.25rem; /* 20px */
+        }
+        .publication-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #64748b; /* slate-500 */
+            font-size: 1.25rem; /* 20px */
+            line-height: 1.75rem; /* 28px */
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-700">
+<body class="bg-white text-slate-700">
 
-    <header class="bg-white/90 backdrop-blur-lg sticky top-0 z-50 border-b border-slate-200/80 shadow-sm">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home" class="text-xl font-bold text-slate-800 hover:text-blue-600 transition-colors">Home</a>
-            <nav class="hidden md:flex space-x-8 text-slate-600 font-medium">
-                <a href="#publications" class="hover:text-blue-600 transition-colors">Publications</a>
-                <a href="#experience" class="hover:text-blue-600 transition-colors">Experience</a>
-                <a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a>
-            </nav>
-            <button id="mobile-menu-button" class="md:hidden text-slate-700 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200">
-            <a href="#publications" class="block py-3 px-6 text-slate-600 hover:bg-slate-100 transition-colors">Publications</a>
-            <a href="#experience" class="block py-3 px-6 text-slate-600 hover:bg-slate-100 transition-colors">Experience</a>
-            <a href="#contact" class="block py-3 px-6 text-slate-600 hover:bg-slate-100 transition-colors">Contact</a>
-        </div>
-    </header>
-
+    <!-- Main Content -->
     <main class="container mx-auto px-6 py-12 md:py-20">
+        <div class="max-w-4xl mx-auto">
+            
+            <!-- Header Section -->
+            <header class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl text-slate-800 tracking-tight">Hyeonsam Tak</h1>
+                <div class="mt-4 w-24 h-px bg-blue-600 mx-auto"></div>
+            </header>
 
-        <section id="home" class="min-h-[60vh] flex items-center">
-            <div class="w-full">
-                <div>
-                    <h1 class="text-4xl font-bold text-slate-900 leading-tight tracking-tight">Hyeonsam Tak</h1>
-                    
-                    <div class="mt-8">
-                        <h3 class="text-base font-semibold text-slate-500 uppercase tracking-wider mb-3">Fields of Interest</h3>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="bg-blue-100 text-blue-800 font-medium px-4 py-1.5 rounded-full text-sm">Social psychology</span>
-                            <span class="bg-green-100 text-green-800 font-medium px-4 py-1.5 rounded-full text-sm">Bayesian method</span>
-                            <span class="bg-yellow-100 text-yellow-800 font-medium px-4 py-1.5 rounded-full text-sm">Socioeconomic status</span>
-                        </div>
+            <!-- Profile Section -->
+            <section class="mb-16 p-8 rounded-lg border border-slate-200 shadow-inner shadow-slate-100">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                    <div class="md:col-span-1 flex justify-center">
+                        <!-- 프로필 사진을 이곳에 추가하세요. 'profile.jpg' 파일을 GitHub에 업로드하고 아래 src를 수정하면 됩니다. -->
+                        <img src="https://placehold.co/200x250/e2e8f0/64748b?text=Profile" alt="Hyeonsam Tak" class="rounded-md w-48 h-60 object-cover shadow-md">
                     </div>
-
-                    <div class="mt-8 bg-slate-100/80 p-6 rounded-xl">
-                        <h3 class="text-base font-semibold text-slate-500 uppercase tracking-wider">Education</h3>
-                        <div class="mt-2 text-slate-700">
-                            <p class="text-lg font-medium text-slate-800">B.A. in Russian and Economics (Dual Degree)</p>
-                            <p class="text-md text-slate-500">Hankuk University of Foreign Studies, 2024</p>
-                        </div>
-                    </div>
-
-                    <div class="mt-10 flex items-center gap-4">
-                        <a href="#contact" class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-all transform hover:scale-105">Contact Me</a>
-                        <a href="#publications" class="bg-white text-slate-700 font-semibold px-6 py-3 rounded-lg border border-slate-300 hover:bg-slate-100 hover:border-slate-400 transition-all transform hover:scale-105">View Publications</a>
-                        <a href="https://scholar.google.com/citations?user=k4AiGdEAAAAJ&hl=ko&oi=ao" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-blue-600 transition-colors transform hover:scale-110" title="Google Scholar Profile">
-                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.242 13.769L0 9.5L12 0L24 9.5L18.758 13.769L12 18.25L5.242 13.769ZM12 4.75L3.142 9.5L12 14.25L20.858 9.5L12 4.75Z"/>
-                                <path d="M12 24C10.344 24 9 22.656 9 21V15.5L12 18.25L15 15.5V21C15 22.656 13.656 24 12 24Z"/>
-                            </svg>
-                        </a>
+                    <div class="md:col-span-2 text-lg leading-relaxed">
+                        <p class="font-semibold text-slate-800">Research Assistant</p>
+                        <p class="text-blue-700 hover:underline">Korea Development Institute (KDI)</p>
+                        <p class="mt-2 text-base text-slate-500">263 Namsejong-ro, Sejong-si, South Korea</p>
+                        <p class="mt-4">
+                            <a href="mailto:hyeonsam.tak@gmail.com" class="text-blue-700 hover:underline">hyeonsam.tak (at) gmail.com</a>
+                        </p>
+                        <p class="mt-2">
+                            Curriculum Vitae (CV): <a href="https://www.dropbox.com/scl/fi/u2xjpcvndivjtpvluss08/Tak-CV.pdf?rlkey=f7wkpet9kkl5jzshol2nyc7j3&st=bd9b8cz3&dl=0" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:underline font-semibold">PDF</a>
+                        </p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <div class="space-y-24 mt-24">
-            <section id="publications">
-                <h2 class="text-3xl font-bold text-slate-900 mb-8 tracking-tight">Publications</h2>
+            <!-- About Me Section -->
+            <section class="mb-16 text-lg leading-relaxed space-y-4">
+                <p>Welcome! My name is Hyeonsam Tak (you may call me Sam). I received my B.A. in Russian and Economics from Hankuk University of Foreign Studies in 2024. I am currently a research assistant in the Office of Macroeconomic Analysis and Forecasting at the Korea Development Institute (KDI).</p>
+                <p>I study the intersection of political psychology, social psychology, sociology, and economics. Specifically, I focus on the following research questions: (1) How do social structures alter the effects of personal attributes, such as socioeconomic status, on outgroup exclusion, moral reasoning, and prosocial behavior? (2) How do variables representing social trust and social integration at the national level influence suicide? (3) How do cultural characteristics influence individual behavior?</p>
+                <p>I primarily use multi-method approaches with international samples, but I am also interested in empirical analysis using methodologies from applied macroeconomics, such as cross-country panel analysis, the synthetic control method, and large Bayesian VAR models.</p>
+            </section>
+
+            <!-- Publications Section -->
+            <section id="publications" class="mb-16">
+                <h2 class="text-3xl text-slate-800 border-b border-slate-200 pb-4 mb-8">Publications</h2>
                 <div class="space-y-12">
                     <div>
-                        <h3 class="text-xl font-semibold text-slate-800 border-b border-slate-200 pb-3 mb-6">Journal Papers in Review</h3>
-                        <ul class="space-y-6">
-                            <li class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80">
-                                <p class="font-semibold text-slate-800 leading-snug">“Elevated Suicide Rates Diminish Internalized Morality, Especially Among High Socioeconomic Status Individuals.”</p>
-                                <p class="mt-2 text-slate-600">Tak, H.</p>
-                                <p class="mt-2 text-sm text-slate-500">Submitted to: <em>Nature Human Behavior</em>.</p>
+                        <h3 class="text-2xl text-slate-700 mb-6">Journal Papers in Review</h3>
+                        <ul class="publication-list text-lg leading-relaxed">
+                            <li>
+                                <p>"Elevated Suicide Rates Diminish Internalized Morality, Especially Among High Socioeconomic Status Individuals."</p>
+                                <p class="text-slate-600"><em>Submitted to: Nature Human Behavior</em>.</p>
                             </li>
-                            <li class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80">
-                                <p class="font-semibold text-slate-800 leading-snug">“Outgroup Exclusion is Maximized at the Extremes when Income and Subjective Class Match.”</p>
-                                <p class="mt-2 text-slate-600">Tak, H.</p>
-                                <p class="mt-2 text-sm text-slate-500">Submitted to: <em>Group Processes & Intergroup Relations</em>.</p>
+                            <li>
+                                <p>"Outgroup Exclusion is Maximized at the Extremes when Income and Subjective Class Match."</p>
+                                <p class="text-slate-600"><em>Submitted to: Group Processes & Intergroup Relations</em>.</p>
                             </li>
-                            <li class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80">
-                                <p class="font-semibold text-slate-800 leading-snug">“Socioeconomic Status, Collectivism, and Prosocial Civic Engagement.”</p>
-                                <p class="mt-2 text-slate-600">Tak, H.</p>
-                                <p class="mt-2 text-sm text-slate-500">Submitted to: <em>Health and Social Welfare Review</em>.</p>
+                            <li>
+                                <p>"Socioeconomic Status, Collectivism, and Prosocial Civic Engagement."</p>
+                                <p class="text-slate-600"><em>Submitted to: Health and Social Welfare Review</em>.</p>
                             </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h3 class="text-xl font-semibold text-slate-800 border-b border-slate-200 pb-3 mb-6">Journal Papers Accepted</h3>
-                        <ul class="space-y-6">
-                            <li class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80">
-                                <p class="font-semibold text-slate-800 leading-snug">“Economic Resources Moderate Meritocracy‘s Impact on Fertility Intentions Among Korean Youth.”</p>
-                                <p class="mt-2 text-slate-600">Choi Y., Tak, H.</p>
-                                <p class="mt-2 text-sm text-slate-500"><em>Journal of the Korean Official Statistics</em>.</p>
+                            <li>
+                                <p>"Rising Unemployment Elevates Suicide Mortality in Low-Fertility Societies: Evidence from a 179-Country Panel Analysis."</p>
+                                <p class="text-slate-600"><em>Submitted to: Quarterly Journal of Labor Policy</em>.</p>
                             </li>
                         </ul>
                     </div>
-
                     <div>
-                        <h3 class="text-xl font-semibold text-slate-800 border-b border-slate-200 pb-3 mb-6">Peer-Reviewed Journal Publications</h3>
-                        <ul class="space-y-6">
-                            <li class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80">
-                                <p class="font-semibold text-slate-800 leading-snug">“The Relationship between Social Status and Donation Behavior: Focusing on Analysis of Donation Participation and Donation Intention.”</p>
-                                <p class="mt-2 text-slate-600">Tak, H. (2024).</p>
-                                <p class="mt-2 text-sm text-slate-500"><em>Health and Social Welfare Review</em>, 44(4), 151–173.</p>
+                        <h3 class="text-2xl text-slate-700 mb-6">Journal Papers Accepted</h3>
+                        <ul class="publication-list text-lg leading-relaxed">
+                            <li>
+                                <p>"Economic Resources Moderate Meritocracy‘s Impact on Fertility Intentions Among Korean Youth" (with Choi Y.).</p>
+                                <p class="text-slate-600"><em>Journal of the Korean Official Statistics</em>.</p>
                             </li>
-                            <li class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80">
-                                <p class="font-semibold text-slate-800 leading-snug">“The Impact of Youth Unemployment on Burnout: Microscopic Evidence from South Korea.”</p>
-                                <p class="mt-2 text-slate-600">Tak, H., & Cha, J. (2024).</p>
-                                <p class="mt-2 text-sm text-slate-500"><em>Journal of the Korean Official Statistics</em>, 29(2), 81–96.</p>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl text-slate-700 mb-6">Peer-Reviewed Journal Publications</h3>
+                        <ul class="publication-list text-lg leading-relaxed">
+                            <li>
+                                <p>"The Relationship between Social Status and Donation Behavior: Focusing on Analysis of Donation Participation and Donation Intention."</p>
+                                <p class="text-slate-600"><em>Health and Social Welfare Review</em>, 44(4), 151–173, 2024.</p>
                             </li>
-                            <li class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80">
-                                <p class="font-semibold text-slate-800 leading-snug">“The Long-term Relationship between Job Instability and Suicide Rate: The Comparisons of Population Groups.”</p>
-                                <p class="mt-2 text-slate-600">Tak, H., Cha, J., & Son, J. (2023).</p>
-                                <p class="mt-2 text-sm text-slate-500"><em>Quarterly Journal of Labor Policy</em>, 23(3), 1–32.</p>
+                            <li>
+                                <p>"The Impact of Youth Unemployment on Burnout: Microscopic Evidence from South Korea" (with Cha, J.).</p>
+                                <p class="text-slate-600"><em>Journal of the Korean Official Statistics</em>, 29(2), 81–96, 2024.</p>
                             </li>
-                            <li class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80">
-                                <p class="font-semibold text-slate-800 leading-snug">“A Study on Sustainability of India’s Non-Aligned Movement using Balance of Threat Theory.”</p>
-                                <p class="mt-2 text-slate-600">Tak, H., Cha, J., & Choi, R. (2023).</p>
-                                <p class="mt-2 text-sm text-slate-500"><em>Journal of South Asian Studies</em>, 28(4), 105–148.</p>
+                            <li>
+                                <p>"The Long-term Relationship between Job Instability and Suicide Rate: The Comparisons of Population Groups" (with Cha, J. and Son, J.).</p>
+                                <p class="text-slate-600"><em>Quarterly Journal of Labor Policy</em>, 23(3), 1–32, 2023.</p>
+                            </li>
+                            <li>
+                                <p>"A Study on Sustainability of India’s Non-Aligned Movement using Balance of Threat Theory" (with Cha, J. and Choi, R.).</p>
+                                <p class="text-slate-600"><em>Journal of South Asian Studies</em>, 28(4), 105–148, 2023.</p>
                             </li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-            <section id="experience">
-                <h2 class="text-3xl font-bold text-slate-900 mb-8 tracking-tight">Experience & Honors</h2>
-                <div class="flex flex-col space-y-12">
+            <!-- Experience & Honors Section -->
+            <section id="experience" class="mb-16">
+                <h2 class="text-3xl text-slate-800 border-b border-slate-200 pb-4 mb-8">Experience & Honors</h2>
+                <div class="space-y-12">
                     <div>
-                        <h3 class="text-xl font-semibold text-slate-800 border-b border-slate-200 pb-3 mb-6">Professional Affiliations</h3>
-                        <div class="space-y-6">
-                            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80">
+                        <h3 class="text-2xl text-slate-700 mb-6">Professional Affiliations</h3>
+                        <ul class="publication-list text-lg leading-relaxed">
+                            <li>
                                 <p class="font-semibold text-slate-800">Korea Development Institute (KDI)</p>
                                 <p class="text-slate-600">Research Assistant, Office of Macroeconomic Analysis and Forecasting</p>
                                 <p class="text-sm text-slate-500 mt-1">Oct. 2024 – Sep. 2025</p>
-                            </div>
-                            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80">
+                            </li>
+                            <li>
                                 <p class="font-semibold text-slate-800">Korea Institute for Industrial Economics and Trade</p>
                                 <p class="text-slate-600">Research Assistant, Center for Economic Outlook and Statistical Analysis</p>
                                 <p class="text-sm text-slate-500 mt-1">Mar. 2024 – Oct. 2024</p>
-                            </div>
-                            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80">
+                            </li>
+                            <li>
                                 <p class="font-semibold text-slate-800">Ministry of SMEs and Startups</p>
                                 <p class="text-slate-600">Research Intern, Division for Finance</p>
-                                <p class="text-sm text-slate-500 mt-1">Jun. 2023 – Dec. 2024</p>
-                            </div>
-                        </div>
+                                <p class="text-sm text-slate-500 mt-1">Jun. 2023 – Dec. 2023</p>
+                            </li>
+                        </ul>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold text-slate-800 border-b border-slate-200 pb-3 mb-6">Honors & Awards</h3>
-                        <div class="space-y-6">
-                            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80">
-                                <div class="flex justify-between items-baseline">
-                                    <p class="font-semibold text-slate-800">Statistics Korea</p>
-                                    <p class="text-sm text-slate-500 flex-shrink-0 ml-4">2023</p>
-                                </div>
-                                <p class="text-slate-500 text-sm mt-1">Thesis Contest</p>
-                                <p class="text-slate-600 mt-1">Top Prize (Ph.D. & Post-doctoral Combined)</p>
-                            </div>
-                            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80">
-                                <div class="flex justify-between items-baseline">
-                                    <p class="font-semibold text-slate-800">Ministry of Employment and Labor</p>
-                                    <p class="text-sm text-slate-500 flex-shrink-0 ml-4">2023</p>
-                                </div>
-                                <p class="text-slate-500 text-sm mt-1">Thesis Contest</p>
-                                <p class="text-slate-600 mt-1">Top Prize (Ph.D. & Post-doctoral Combined)</p>
-                            </div>
-                            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80">
-                                <div class="flex justify-between items-baseline">
-                                    <p class="font-semibold text-slate-800">Maeil Business Newspaper</p>
-                                    <p class="text-sm text-slate-500 flex-shrink-0 ml-4">2022</p>
-                                </div>
-                                <p class="text-slate-500 text-sm mt-1">Economics Thesis Competition</p>
-                                <p class="text-slate-600 mt-1">3rd Place (Undergraduate & Master’s)</p>
-                            </div>
-                        </div>
+                        <h3 class="text-2xl text-slate-700 mb-6">Honors & Awards</h3>
+                        <ul class="publication-list text-lg leading-relaxed">
+                            <li>
+                                <p class="font-semibold text-slate-800">Statistics Korea, 2023</p>
+                                <p class="text-slate-600">Thesis Contest, Top Prize (Ph.D. & Post-doctoral Combined)</p>
+                            </li>
+                            <li>
+                                <p class="font-semibold text-slate-800">Ministry of Employment and Labor, 2023</p>
+                                <p class="text-slate-600">Thesis Contest, Top Prize (Ph.D. & Post-doctoral Combined)</p>
+                            </li>
+                            <li>
+                                <p class="font-semibold text-slate-800">Maeil Business Newspaper, 2022</p>
+                                <p class="text-slate-600">Economics Thesis Competition, 3rd Place (Undergraduate & Master’s)</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
+            
+            <!-- Footer -->
+            <footer class="border-t border-slate-200 pt-8 text-center text-slate-500 text-sm">
+                 <p>&copy; <span id="year"></span> Hyeonsam Tak. All Rights Reserved.</p>
+            </footer>
 
-            <section id="contact">
-                <div class="bg-white p-8 md:p-10 rounded-xl shadow-sm border border-slate-200/80">
-                    <h2 class="text-3xl font-bold text-slate-900 mb-2 tracking-tight">Get in Touch</h2>
-                    <p class="text-slate-600 mb-8">Feel free to reach out for collaborations or inquiries.</p>
-                    <div class="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-8">
-                        <a href="mailto:hyeonsam.tak@gmail.com" class="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition-colors">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                            <span class="font-medium">hyeonsam.tak@gmail.com</span>
-                        </a>
-                        <div class="flex items-center gap-3 text-slate-600">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
-                            <span class="font-medium">+82-10-8376-1095</span>
-                        </div>
-                    </div>
-                    <div class="mt-8 pt-8 border-t border-slate-200 text-center">
-                        <a href="https://drive.google.com/file/d/1GGAYIi7Ml3wGuYZ_idWlziQsuARXrohA/view" target="_blank" rel="noopener noreferrer" class="bg-slate-800 text-white font-semibold px-8 py-4 rounded-lg shadow-md hover:bg-slate-900 transition-all transform hover:scale-105 inline-block">
-                            Download Full CV
-                        </a>
-                    </div>
-                </div>
-            </section>
         </div>
     </main>
 
-    <footer class="bg-slate-100 border-t border-slate-200 mt-24">
-        <div class="container mx-auto px-6 py-8 flex flex-col sm:flex-row justify-between items-center text-sm">
-            <p class="text-slate-500">&copy; <span id="year"></span> Hyeonsam Tak. All Rights Reserved.</p>
-            <div class="flex space-x-4 mt-4 sm:mt-0">
-                <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors" title="LinkedIn Profile">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                </a>
-            </div>
-        </div>
-    </footer>
-
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
-
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
     </script>
 
 </body>
